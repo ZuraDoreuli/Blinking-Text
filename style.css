@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Chango', cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(./brick.jpg);
+}
+body::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #000000c4;
+  animation: blink-bg linear infinite 3s;
+}
+h1 {
+  font-size: 100px;
+  letter-spacing: 12px;
+  color: #bdbdc0;
+  z-index: 2;
+  text-shadow: 0 -20px 120px #8a8787,
+  1px 1px 2px #b2b4b9,
+  0 0 10px #757575,
+  0 0 6px #dbdbdb,
+  0 0 2px #f0f0f0,
+  0 20px 5px #000000;
+  animation: blink linear infinite 3s;
+}
+@keyframes blink-bg {
+  50% {
+    background-color: #000000c4;
+  }
+  60% {
+    background-color: #000000d7;
+  }
+  73% {
+    background-color: #000000d7;
+  }
+  80% {
+    background-color: #000000c4;
+  }
+}
+@keyframes blink {
+  50% {
+    color: #bdbdc0;
+    text-shadow: 0 -20px 120px #8a8787,
+    1px 1px 2px #b2b4b9,
+    0 0 10px #757575,
+    0 0 6px #dbdbdb,
+    0 0 2px #f0f0f0,
+    0 20px 5px #000000;
+  }
+  60% {
+    text-shadow: none;
+  }
+  61% {
+    color: #bebebe;
+  }
+  62% {
+    color: #bdbcbc;
+    text-shadow: inherit;
+  }
+  63% {
+    color: #4d4d4d;
+  }
+  70% {
+    color: #bdbcbc;
+    text-shadow: inherit;
+  }
+  71% {
+    color: #4d4d4d;
+  }
+  72% {
+    text-shadow: none;
+  }
+  73% {
+    color: #bdbcbc;
+    text-shadow: inherit;
+  }
+  80% {
+    color: #bdbdc0;
+    text-shadow: 0 -20px 120px #8a8787,
+    1px 1px 2px #b2b4b9,
+    0 0 10px #757575,
+    0 0 6px #dbdbdb,
+    0 0 2px #f0f0f0,
+    0 20px 5px #000000;
+  }
+}
